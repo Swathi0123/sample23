@@ -7,6 +7,7 @@ COPY --from=prune /go/bin/node-prune /usr/local/bin/
 ADD . .
 RUN npm install
 
+
 FROM node:14.9-slim
 ENV NODE_ENV production
 WORKDIR /app
