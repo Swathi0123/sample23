@@ -77,4 +77,5 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
       run: |
+        kubectl cluster-info
         kubectl kustomize k8s | kubectl apply -f -
